@@ -4,7 +4,6 @@
 #include <cwf/sqlquery.h>
 #include "config.h"
 
-#if defined(PSQL_HOST) && defined(PSQL_DB) && defined(PSQL_USER) && defined(PSQL_PASSWORD) && defined(PSQL_PORT)
 
 CWF::SqlDatabaseStorage my_connection("QPSQL", PSQL_HOST, PSQL_DB, PSQL_USER, PSQL_PASSWORD, PSQL_PORT);
 
@@ -63,5 +62,3 @@ int main(int argc, char *argv[])
     server.addController<CEPController>("/cep");
     return server.start();
 }
-
-#endif
