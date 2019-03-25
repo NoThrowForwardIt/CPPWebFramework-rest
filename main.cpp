@@ -4,30 +4,6 @@
 #include <cwf/sqlquery.h>
 #include "config.h"
 
-#ifndef PSQL_HOST
-#error "PSQL_HOST is empty. Pay some attention to config.h file :-)"
-#endif
-
-#ifndef PSQL_DB
-#error "PSQL_DB is empty. Pay some attention to config.h file :-)"
-#endif
-
-#ifndef PSQL_USER
-#error "PSQL_USER is empty. Pay some attention to config.h file :-)"
-#endif
-
-#ifndef PSQL_PASSWORD
-#error "PSQL_PASSWORD is empty. Pay some attention to config.h file :-)"
-#endif
-
-#ifndef PSQL_PORT
-#error "PSQL_PORT is empty. Pay some attention to config.h file :-)"
-#endif
-
-#ifndef SERVER_CONF_DIR
-#error "SERVER_CONF_DIR is empty. Pay some attention to config.h file :-)"
-#endif
-
 #if defined(PSQL_HOST) && defined(PSQL_DB) && defined(PSQL_USER) && defined(PSQL_PASSWORD) && defined(PSQL_PORT)
 
 CWF::SqlDatabaseStorage my_connection("QPSQL", PSQL_HOST, PSQL_DB, PSQL_USER, PSQL_PASSWORD, PSQL_PORT);
